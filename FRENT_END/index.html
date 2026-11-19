@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Sacred Sites Information Portal</title>
+    <link rel="stylesheet" href="portal-nav.css">
+    <script src="portal-nav.js" defer></script>
+    <script src="portal-saved-sites.js" defer></script>
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header class="site-header" data-site-header></header>
+
+    <main class="container" id="home">
+        <section class="hero">
+            <div>
+                <h1>Discover the sacred places of India.</h1>
+                <p>
+                    Explore places of worship and spiritual heritage across India’s many faiths, regions, and traditions.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="#temples" class="primary-btn">Explore Sacred Sites</a>
+                    <a href="#about" class="secondary-btn">Learn More</a>
+                </div>
+
+                <div class="stats">
+                    <div class="stat-box">
+                        <strong id="temple-count">—</strong>
+                        Places of worship
+                    </div>
+                    <div class="stat-box">
+                        <strong id="state-count">—</strong>
+                        States and territories
+                    </div>
+                </div>
+            </div>
+
+            <div class="hero-card">
+                <a class="hero-temple-link" id="hero-temple-link" href="#temples" aria-label="View places of worship">
+                    <img class="temple-image" id="hero-temple-image" alt="" hidden>
+                </a>
+                <a class="photo-badge" id="hero-temple-badge" href="#temples" hidden></a>
+            </div>
+        </section>
+
+        <section class="search-panel" aria-label="Places of worship search form">
+            <form class="search-grid" id="temple-search-form">
+                <input id="temple-search-query" type="search" placeholder="Search site, faith, city, or state" aria-label="Search site, faith, city, or state">
+                <select id="temple-search-state" aria-label="Select state or territory">
+                    <option value="">Choose State or Territory</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+            <p id="temple-search-status" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="content-section" id="temples">
+            <div class="section-heading">
+                <h2>Places of Worship across India</h2>
+                <a href="sacred-sites.html">View all</a>
+            </div>
+
+            <div class="card-grid" id="temple-results" aria-live="polite">
+            </div>
+        </section>
+
+        <section class="content-section" id="destinations">
+            <div class="section-heading">
+                <h2>Explore India’s Sacred Heritage</h2>
+            </div>
+
+            <div class="features">
+                <div class="feature-box">
+                    <div class="feature-icon">🕉️</div>
+                    <h4>Spiritual Travel</h4>
+                    <p>Visit places rooted in devotion, history, and peaceful reflection.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🏛️</div>
+                    <h4>Architectural Heritage</h4>
+                    <p>Explore architecture and craftsmanship shaped by many traditions.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">🌄</div>
+                    <h4>Scenic Beauty</h4>
+                    <p>From mountains to rivers, these destinations are stunning in every season.</p>
+                </div>
+
+                <div class="feature-box">
+                    <div class="feature-icon">📖</div>
+                    <h4>Cultural Learning</h4>
+                    <p>Learn about the histories and traditions connected to each site.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="cta">
+            <div>
+                <h3>Plan your next sacred journey.</h3>
+                <p>Find places of peace, devotion, and heritage across India.</p>
+            </div>
+            <a href="#contact" class="primary-btn">Get Started</a>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <p>&copy; 2024 India Sacred Sites Information Portal. All rights reserved.</p>
+    </footer>
+</body>
+</html>

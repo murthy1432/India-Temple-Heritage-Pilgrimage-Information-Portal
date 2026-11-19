@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Search and filter places of worship across India by name, faith, site type, and state.">
+    <title>All Places of Worship | India Sacred Sites Portal</title>
+    <link rel="stylesheet" href="portal-nav.css">
+    <script src="portal-nav.js" defer></script>
+    <script src="portal-saved-sites.js" defer></script>
+    <link rel="stylesheet" href="sacred-sites.css">
+    <script src="sacred-sites.js" defer></script>
+</head>
+<body>
+    <header class="site-header" data-site-header></header>
+    <main class="container">
+        <section class="page-heading" aria-labelledby="page-title">
+            <p>India's many faiths and traditions</p>
+            <h1 id="page-title">All Places of Worship</h1>
+            <p class="intro">Search sacred sites across India, then narrow the results by faith, site type, or state and territory.</p>
+        </section>
+
+        <section class="search-panel" aria-label="Search and filter places of worship">
+            <form class="search-form" id="site-search-form">
+                <input id="site-query" type="search" placeholder="Search by name, city, state, or faith" aria-label="Search by name, city, state, or faith">
+                <select id="site-faith" aria-label="Filter by faith">
+                    <option value="">All faiths</option>
+                </select>
+                <select id="site-state" aria-label="Filter by state or territory">
+                    <option value="">All states and territories</option>
+                </select>
+                <button type="submit">Search</button>
+            </form>
+        </section>
+
+        <section aria-label="Search results">
+            <div class="results-bar">
+                <p id="results-status" role="status" aria-live="polite">Loading places of worship...</p>
+                <button class="clear-button" id="clear-filters" type="button">Clear filters</button>
+            </div>
+            <div class="card-grid" id="site-results"></div>
+            <nav class="pagination" id="pagination" aria-label="Results pages" hidden>
+                <button id="previous-page" type="button">Previous</button>
+                <span id="page-status"></span>
+                <button id="next-page" type="button">Next</button>
+            </nav>
+        </section>
+    </main>

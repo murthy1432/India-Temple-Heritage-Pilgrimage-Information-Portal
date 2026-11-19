@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in or Sign up | India Temple Portal</title>
+    <link rel="stylesheet" href="portal-nav.css">
+    <script src="portal-nav.js" defer></script>
+    <link rel="stylesheet" href="LOGIN_PAGE.css">
+    <script src="LOGIN_PAGE.js" defer></script>
+</head>
+<body>
+    <header class="site-header" data-site-header></header>
+    <main class="auth-main">
+        <div class="auth-card">
+        <p class="brand">India Temple Portal</p>
+        <h1 id="page-title">Welcome back</h1>
+        <p class="intro" id="page-intro">Log in with your username and password.</p>
+
+        <div class="mode-switch" role="tablist" aria-label="Account options">
+            <button class="mode-button" id="login-tab" type="button" role="tab" aria-selected="true" aria-controls="login-panel">Log in</button>
+            <button class="mode-button" id="signup-tab" type="button" role="tab" aria-selected="false" aria-controls="signup-panel">Sign up</button>
+        </div>
+
+        <section id="login-panel" role="tabpanel" aria-labelledby="login-tab">
+            <form id="login-form">
+                <div class="field">
+                    <label for="login-username">Username</label>
+                    <input id="login-username" name="username" type="text" autocomplete="username" required>
+                </div>
+                <div class="field">
+                    <label for="login-password">Password</label>
+                    <input id="login-password" name="password" type="password" autocomplete="current-password" required>
+                </div>
+                <button class="submit-button" type="submit">Log in</button>
+            </form>
+        </section>
+
+        <section id="signup-panel" role="tabpanel" aria-labelledby="signup-tab" hidden>
+            <form id="signup-form">
+                <div class="field">
+                    <label for="signup-username">Choose a username</label>
+                    <input id="signup-username" name="username" type="text" autocomplete="username" minlength="3" maxlength="40" required>
+                </div>
+                <div class="field">
+                    <label for="signup-password">Choose a password</label>
+                    <input id="signup-password" name="password" type="password" autocomplete="new-password" minlength="8" required>
+                </div>
+                <div class="field">
+                    <label for="confirm-password">Confirm password</label>
+                    <input id="confirm-password" name="confirmPassword" type="password" autocomplete="new-password" minlength="8" required>
+                </div>
+                <button class="submit-button" type="submit">Create account</button>
+            </form>
+        </section>
+
+        <p class="message" id="form-message" role="status" aria-live="polite"></p>
+        <p class="notice">Accounts are stored securely on the portal server. Open this page from the running backend.</p>
+        <a class="back-link" href="index.html">Back to home</a>
+        </div>
+    </main>

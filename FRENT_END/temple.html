@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sacred Site Details | India Sacred Sites Portal</title>
+    <link rel="stylesheet" href="portal-nav.css">
+    <script src="portal-nav.js" defer></script>
+    <script src="portal-saved-sites.js" defer></script>
+    <link rel="stylesheet" href="temple.css">
+    <script src="temple.js" defer></script>
+</head>
+<body>
+    <header class="site-header" data-site-header></header>
+
+    <main>
+        <p id="page-status" role="status" aria-live="polite">Loading site details...</p>
+        <article class="temple-detail" id="temple-detail" hidden>
+            <section class="temple-hero">
+                <img class="hero-image" id="temple-image" alt="">
+                <div class="hero-copy">
+                    <p class="location" id="temple-location"></p>
+                    <h1 id="temple-name"></h1>
+                    <p class="hero-subtitle" id="hero-subtitle"></p>
+                    <div id="save-site-control"></div>
+                </div>
+            </section>
+            <div class="content">
+                <div class="overview">
+                    <section class="info-panel">
+                        <h2>Faith and Religious Focus</h2>
+                        <ul class="detail-list" id="temple-deity"></ul>
+                    </section>
+                    <section class="info-panel">
+                        <h2>Visiting and Prayer Times</h2>
+                        <ul class="detail-list" id="temple-timings"></ul>
+                    </section>
+                </div>
+
+                <section class="section-panel history-panel">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-kicker">The story</p>
+                            <h2>About this Place</h2>
+                        </div>
+                    </div>
+                    <ul class="detail-list" id="temple-history"></ul>
+                </div>
+
+                <div class="overview section-panel list-panel">
+                    <section>
+                        <p class="section-kicker">Celebrate and discover</p>
+                        <h2>Festivals</h2>
+                        <ul class="detail-list" id="temple-festivals"></ul>
+                    </section>
+                    <section class="guidelines-panel">
+                        <p class="section-kicker">Plan a respectful visit</p>
+                        <h2>Visitor Guidelines</h2>
+                        <ul class="detail-list" id="temple-guidelines"></ul>
+                    </section>
+                </div>
+
+                <section class="booking-section">
+                    <div class="section-heading">
+                        <div>
+                            <p class="section-kicker">Plan your visit</p>
+                            <h2>Visitor and Entry Information</h2>
+                        </div>
+                    </div>
+                    <ul class="detail-list">
+                        <li>
+                            <span class="line-number">1</span>
+                            <span>Opening, prayer, and entry details are set by each site. Check its official information before travelling.</span>
+                        </li>
+                        <li>
+                            <span class="line-number">2</span>
+                            <span>Live availability, queue status, and waiting-list numbers are not provided by this portal.</span>
+                        </li>
+                        <li>
+                            <span class="line-number">3</span>
+                            <span>Entry fees and visitor arrangements can change. Confirm current details with the site before visiting.</span>
+                        </li>
+                        <li>
+                            <span class="line-number">4</span>
+                            <span>Confirm visiting hours, seasonal access, registration needs, and visitor rules before travelling.</span>
+                        </li>
+                    </ul>
+                    <p class="booking-note"><span aria-hidden="true">i</span><span id="booking-information"></span></p>
+                    <div class="official-links" id="official-links"></div>
+                    <a class="map-link" id="map-link" target="_blank" rel="noopener noreferrer">Open location in maps</a>
+                </section>
+            </div>
+        </article>
+    </main>
+</body>
+</html>

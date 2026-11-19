@@ -1,0 +1,272 @@
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    border-bottom: 1px solid rgba(23, 60, 112, 0.08);
+    background: rgba(255, 255, 255, 0.94);
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.05);
+    backdrop-filter: blur(14px);
+}
+
+.site-topbar {
+    width: min(1200px, 92%);
+    min-height: 76px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-brand {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 12px;
+    color: #173c70;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-brand-mark {
+    width: 42px;
+    height: 42px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff9933, #ffbf69);
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.12);
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+.site-nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 8px 18px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.site-nav a {
+    color: #1f2a44;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.site-nav a:not(.site-nav-button):hover {
+    color: #a56209;
+}
+
+.site-nav .site-nav-button {
+    display: inline-block;
+    padding: 11px 18px;
+    border-radius: 999px;
+    background: #123456;
+    color: #fff;
+}
+
+.site-nav .site-nav-button:hover {
+    background: #24558d;
+}
+
+.site-nav button.site-nav-button {
+    border: 0;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.site-account {
+    display: inline-flex;
+    align-items: center;
+}
+
+.site-account-avatar {
+    display: block;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.site-nav .site-account-link {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    overflow: hidden;
+    border: 2px solid #ff9933;
+    border-radius: 50%;
+    background: #fff7ec;
+    color: #1f2a44;
+    text-decoration: none;
+}
+
+.site-nav .site-account-link:hover {
+    border-color: #f2c58f;
+    color: #a56209;
+}
+
+.site-account-fallback {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    place-items: center;
+    color: #173c70;
+    font-size: 1rem;
+    font-weight: 800;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.portal-card-actions {
+    position: absolute;
+    z-index: 8;
+}
+
+.portal-card-actions--bottom {
+    right: 14px;
+    bottom: 14px;
+}
+
+.portal-card-actions--top {
+    top: 20px;
+    right: 20px;
+}
+
+.portal-actions-toggle {
+    display: grid;
+    width: 42px;
+    height: 42px;
+    place-items: center;
+    border: 1px solid rgba(23, 60, 112, 0.12);
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 4px 14px rgba(17, 24, 39, 0.16);
+    color: #173c70;
+    cursor: pointer;
+}
+
+.portal-actions-toggle:hover,
+.portal-actions-toggle[aria-expanded="true"] {
+    border-color: #f28a21;
+    color: #a56209;
+}
+
+.portal-actions-toggle svg {
+    width: 21px;
+    height: 21px;
+}
+
+.portal-actions-toggle:focus-visible,
+.portal-menu-item:focus-visible {
+    outline: 3px solid rgba(55, 124, 189, 0.42);
+    outline-offset: 2px;
+}
+
+.portal-actions-menu {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 8px);
+    display: grid;
+    width: max-content;
+    min-width: 205px;
+    max-width: min(280px, calc(100vw - 32px));
+    gap: 3px;
+    padding: 7px;
+    border: 1px solid #e1e8f2;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 12px 30px rgba(17, 24, 39, 0.2);
+}
+
+.portal-card-actions--top .portal-actions-menu {
+    top: calc(100% + 8px);
+    bottom: auto;
+}
+
+.portal-menu-item {
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    padding: 9px 11px;
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: #263248;
+    font: inherit;
+    font-size: 0.9rem;
+    text-align: left;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.portal-menu-item:hover:not(:disabled) {
+    background: #f3f7fc;
+    color: #173c70;
+}
+
+.portal-menu-item:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.portal-share-options {
+    display: grid;
+    gap: 2px;
+    padding-top: 4px;
+    border-top: 1px solid #e6ecf5;
+}
+
+.portal-actions-status {
+    max-width: 245px;
+    margin: 3px 8px 5px;
+    color: #64748b;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.portal-actions-menu[hidden],
+.portal-share-options[hidden] {
+    display: none !important;
+}
+
+.site-nav [hidden] {
+    display: none !important;
+}
+
+.site-nav a:focus-visible,
+.site-nav button:focus-visible,
+.site-brand:focus-visible {
+    outline: 3px solid #ff9933;
+    outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+    .site-topbar {
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+        padding: 12px 0;
+    }
+
+    .site-nav ul {
+        justify-content: flex-start;
+        gap: 8px 14px;
+    }
+}
