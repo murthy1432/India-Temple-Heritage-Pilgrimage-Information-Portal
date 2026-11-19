@@ -1,0 +1,21 @@
+{
+  "name": "back_end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "SERVER.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node SERVER.js",
+    "build:catalog": "node build-worship-catalog.js",
+    "seed:temples": "node seed-temples.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mongoose": "^9.11.4"
+  }
+}
